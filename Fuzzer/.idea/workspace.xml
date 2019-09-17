@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a6f5933-b38d-4573-a004-ff8e7ae9095f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FuzzSetupManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/FuzzSetupManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fuzzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fuzzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelperDll.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HelperDll.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LogicVarGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/LogicVarGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagerFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/ManagerFunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManagerTypes.py" beforeDir="false" afterPath="$PROJECT_DIR$/ManagerTypes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Win10Core/Helpers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Win10Core/Structs.py" beforeDir="false" afterPath="$PROJECT_DIR$/Win10Core/Structs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Win10Core/Types.py" beforeDir="false" afterPath="$PROJECT_DIR$/Win10Core/Types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.bin" beforeDir="false" afterPath="$PROJECT_DIR$/code.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funcs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/funcs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fuzz.py" beforeDir="false" afterPath="$PROJECT_DIR$/fuzz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logicHelperGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/logicHelperGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/.vs/HelperDll/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/.vs/HelperDll/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/.vs/HelperDll/v15/ipch/9fe8dc10703ed9ab.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/.vs/HelperDll/v15/ipch/9fe8dc10703ed9ab.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/HelperDll.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/HelperDll.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/dllmain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/dllmain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.Build.CppClean.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.exp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.lib" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.pch" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.pch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.tlog/HelperDll.write.1u.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.tlog/HelperDll.write.1u.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/HelperDll.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/dllmain.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/dllmain.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/stdafx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/stdafx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/vc141.idb" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/vc141.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Debug/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Debug/vc141.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.Build.CppClean.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.exp" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.iobj" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.iobj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.ipdb" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.ipdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.lib" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.log" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.pch" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.pch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/HelperDll.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/dllmain.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/dllmain.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/stdafx.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/stdafx.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelperDll/x64/Release/vc141.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../HelperDll/x64/Release/vc141.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utils/fix.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Utils/fix.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>NtSetInformationProcess</find>
+      <find>#</find>
+      <find>UNICODE_STRING</find>
+      <find>str'</find>
+      <find>wstr</find>
+      <find>str</find>
+      <find>TODO</find>
+      <find>int64</find>
+      <find>LARGE_STRING</find>
+      <find>FONTSIGNATURE</find>
+      <find>'*</find>
+      <find>PDD_SURFACE_INT</find>
+      <find>DD_DESTROYVPORTDATA</find>
+      <find>PDD_VIDEOPORT_LOCAL</find>
+      <find>PPDD_SURFACE_INT</find>
+      <find>PDD_SURFACE_LOCAL</find>
+      <find>loadSingleStruct</find>
+      <find>WNDPROC_EX</find>
+      <find>POINTL</find>
+      <find>FLATPTR</find>
+      <find>*</find>
+      <find>RECTL</find>
+      <find>HWINSTA</find>
+      <find>HLSURF</find>
+      <find>HINSTA</find>
+      <find>ARCTYPE</find>
+      <find>HDWP</find>
+      <find>NtUserEndDeferWindowPosEx</find>
+      <find>LockWorkStation</find>
+      <find>print</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/DefFunction.py" />
+        <option value="$PROJECT_DIR$/DefVarTypeBase.py" />
+        <option value="$PROJECT_DIR$/VarTypes.py" />
+        <option value="$PROJECT_DIR$/VarTypes/__init__.py" />
+        <option value="$PROJECT_DIR$/ManagerVarType.py" />
+        <option value="$PROJECT_DIR$/FuzzSetupManagers.py" />
+        <option value="$PROJECT_DIR$/DefVariable.py" />
+        <option value="$PROJECT_DIR$/VarTypes/DefVarTypePtr.py" />
+        <option value="$PROJECT_DIR$/VarTypes/DefVarTypeStruct.py" />
+        <option value="$PROJECT_DIR$/LogicHelpers.py" />
+        <option value="$PROJECT_DIR$/VarTypes/DefVarTypeHandle.py" />
+        <option value="$PROJECT_DIR$/Win10core.py" />
+        <option value="$PROJECT_DIR$/win10core.py" />
+        <option value="$PROJECT_DIR$/Win10Core/Helpers.py" />
+        <option value="$PROJECT_DIR$/VarTypes/DefVarTypeInt.py" />
+        <option value="$PROJECT_DIR$/Win10Core/Funcs.py" />
+        <option value="$PROJECT_DIR$/VarTypes/DefVarTypeBuffer.py" />
+        <option value="$PROJECT_DIR$/DefParameter.py" />
+        <option value="$PROJECT_DIR$/Win10Core/Enums.py" />
+        <option value="$PROJECT_DIR$/ManagerVariables.py" />
+        <option value="$PROJECT_DIR$/MarkupGeneratorBase.py" />
+        <option value="$PROJECT_DIR$/MarkupGeneratorBinary.py" />
+        <option value="$PROJECT_DIR$/Converter.py" />
+        <option value="$PROJECT_DIR$/MarkupGeneratorC.py" />
+        <option value="$PROJECT_DIR$/LogicFuncGenerator.py" />
+        <option value="$PROJECT_DIR$/Win10Core/Structs.py" />
+        <option value="$PROJECT_DIR$/Win10Core/Syscalls.py" />
+        <option value="$PROJECT_DIR$/FuzzSetupManager.py" />
+        <option value="$PROJECT_DIR$/fuzz.py" />
+        <option value="$PROJECT_DIR$/Win10Win32k/Enums.py" />
+        <option value="$PROJECT_DIR$/Win10Core/Types.py" />
+        <option value="$PROJECT_DIR$/Win10Win32k/Structs.py" />
+        <option value="$PROJECT_DIR$/Win10Win32k/Types.py" />
+        <option value="$PROJECT_DIR$/ManagerTypes.py" />
+        <option value="$PROJECT_DIR$/logicHelperGenerator.py" />
+        <option value="$PROJECT_DIR$/Fuzzer.py" />
+        <option value="$PROJECT_DIR$/ManagerFunctions.py" />
+        <option value="$PROJECT_DIR$/LogicVarGenerator.py" />
+        <option value="$PROJECT_DIR$/Win10Win32k/Syscalls.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="260" />
+    <option name="y" value="80" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Fuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fuzzer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="VarTypes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="Win10Core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Fuzzer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Fuzzer" type="462c0819:PsiDirectoryNode" />
+              <item name="Win10Win32k" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Work\Silfen\Fuzzer\Win10Win32k" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Work\Silfen\VarTypes" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.fuzz">
+    <configuration name="Converter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Silfen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Converter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="LogicVarGenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Silfen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LogicVarGenerator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="fuzz" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Silfen" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fuzz.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.fuzz" />
+      <item itemvalue="Python.LogicVarGenerator" />
+      <item itemvalue="Python.Converter" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.fuzz" />
+        <item itemvalue="Python.Converter" />
+        <item itemvalue="Python.LogicVarGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a6f5933-b38d-4573-a004-ff8e7ae9095f" name="Default" comment="" />
+      <created>1528822989898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528822989898</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.0734375" side_tool="true" weight="0.32943678" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.9265625" weight="0.32943678" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995749" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/DefParameter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeStruct.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypePtr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeBuffer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeInt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagerTypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuzz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DefVariable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DefFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DefParameter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeStruct.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypePtr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" lean-forward="true" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeBuffer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeInt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagerTypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuzz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DefFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DefParameter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DefVariable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypePtr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeHandle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeStruct.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DefParameter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="276" selection-start-line="276" selection-end-line="276" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Core/Enums.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DefFunction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DefVariable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeInt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Core/Syscalls0.py" />
+    <entry file="file://$PROJECT_DIR$/MarkupGeneratorBinary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="77" column="58" lean-forward="true" selection-start-line="77" selection-start-column="58" selection-end-line="77" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkupGeneratorC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagerVariables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarkupGeneratorBase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="28" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FuzzSetupManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Core/Syscalls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="990" column="45" selection-start-line="990" selection-start-column="45" selection-end-line="990" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Core/Helpers.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Win32k/Enums.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Win32k/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Core/Structs.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Win32k/Structs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="1602" column="28" selection-start-line="1602" selection-start-column="22" selection-end-line="1602" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Core/Types.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Win32k/Types.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VarTypes/DefVarTypeBuffer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="76" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagerTypes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="54" column="39" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicVarGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logicHelperGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="11" column="81" lean-forward="true" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fuzzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Win10Win32k/Syscalls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="7355" column="5" selection-start-line="7355" selection-start-column="5" selection-end-line="7355" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManagerFunctions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogicFuncGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fuzz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
