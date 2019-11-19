@@ -222,14 +222,13 @@ Data = {
 			{'name': 'ReturnLength', 'type':'PULONG', 'in': False, 'out': True, 'optional': True},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtWaitForMultipleObjects32': {'code': 0x1A, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ObjectCount', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Handles', 'type':'PHANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'WaitType', 'type':'WAIT_TYPE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Alertable', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Timeout', 'type':'PLARGE_INTEGER', 'in': True, 'out': False, 'optional': True},
 		]},
 
 	'NtWriteFileGather': {'code': 0x1B, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -996,10 +995,9 @@ Data = {
 			{'name': 'ThreadHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtAlertThreadByThreadId': {'code': 0x6F, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ThreadId', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtAllocateLocallyUniqueId': {'code': 0x70, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -1029,9 +1027,15 @@ Data = {
 			{'name': 'Seed', 'type':'PUCHAR', 'in': False, 'out': True, 'optional': False},
 		]},
 
-	#TODO: Unknown function until now
 	'NtAllocateVirtualMemoryEx': {'code': 0x74, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'ProcessHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'lpAddress', 'type':'PPVOID', 'in': True, 'out': True, 'optional': False},
+			{'name': 'ZeroBits', 'type':'ULONG_PTR', 'in': True, 'out': False, 'optional': False},
+			{'name': 'pSize', 'type':'PSIZE_T', 'in': True, 'out': True, 'optional': False},
+			{'name': 'flAllocationType', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'DataBuffer', 'type':'PVOID', 'in': True, 'out': True, 'optional': True},
+			{'name': 'DataCount', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtAlpcAcceptConnectPort': {'code': 0x75, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -1261,9 +1265,12 @@ Data = {
 			{'name': 'AlreadySignaled', 'type':'PBOOLEAN', 'in': False, 'out': True, 'optional': True},
 		]},
 
-	#TODO: Unknown function until now
 	'NtCallEnclave': {'code': 0x8F, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'Routine', 'type':'PENCLAVE_ROUTINE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Parameter', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'WaitForThread', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ReturnValue', 'type':'PVOID', 'in': True, 'out': True, 'optional': True},
 		]},
 
 	'NtCancelIoFileEx': {'code': 0x90, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -1304,11 +1311,10 @@ Data = {
 			{'name': 'TmVirtualClock', 'type':'PLARGE_INTEGER', 'in': True, 'out': False, 'optional': True},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtCommitRegistryTransaction': {'code': 0x96, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'RegistryHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Wait', 'type':'BOOL', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtCommitTransaction': {'code': 0x97, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -1329,9 +1335,11 @@ Data = {
 			{'name': 'SecondObjectHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
 		]},
 
-	#TODO: Unknown function until now
+	#TODO: Unknown parameter types
 	'NtCompareSigningLevels': {'code': 0x9A, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtCompareTokens': {'code': 0x9B, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -1363,9 +1371,13 @@ Data = {
 			{'name': 'ConnectionInformationLength', 'type':'PULONG', 'in': True, 'out': True, 'optional': True},
 		]},
 
-	#TODO: Unknown function until now
+	#TODO: Unknown parameter types
 	'NtConvertBetweenAuxiliaryCounterAndPerformanceCounter': {'code': 0x9F, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtCreateDebugObject': {'code': 0xA0, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -1392,18 +1404,17 @@ Data = {
 			{'name': 'Flags', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtCreateEnclave': {'code': 0xA3, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ProcessHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'BaseAddress', 'type':'PVOID', 'in': True, 'out': True, 'optional': False},
+			{'name': 'ZeroBits', 'type':'ULONG_PTR', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Size', 'type':'SIZE_T', 'in': True, 'out': False, 'optional': False},
+			{'name': 'InitialCommitment', 'type':'SIZE_T', 'in': True, 'out': False, 'optional': False},
+			{'name': 'EnclaveType', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'EnclaveInformation', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'EnclaveInformationLength', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'EnclaveError', 'type':'PULONG', 'in': False, 'out': True, 'optional': True},
 		]},
 
 	'NtCreateEnlistment': {'code': 0xA4, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -2029,10 +2040,9 @@ Data = {
 		[
 		]},
 
-	#TODO: Unknown parameter types
 	'NtGetCurrentProcessorNumberEx': {'code': 0xED, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ProcNumber', 'type':'PULONG', 'in': False, 'out': True, 'optional': True},
 		]},
 
 	'NtGetDevicePowerState': {'code': 0xEE, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -2110,14 +2120,13 @@ Data = {
 			{'name': 'SecurityQos', 'type':'PSECURITY_QUALITY_OF_SERVICE', 'in': True, 'out': False, 'optional': False},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtInitializeEnclave': {'code': 0xF7, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ProcessHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'BaseAddress', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'EnclaveInformation', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'EnclaveInformationLength', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'EnclaveError', 'type':'PULONG', 'in': False, 'out': True, 'optional': True},
 		]},
 
 	'NtInitializeNlsFiles': {'code': 0xF8, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -2159,23 +2168,23 @@ Data = {
 			{'name': 'DriverServiceName', 'type':'PUNICODE_STRING', 'in': True, 'out': False, 'optional': False},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtLoadEnclaveData': {'code': 0xFF, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ProcessHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'BaseAddress', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Buffer', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'BufferSize', 'type':'SIZE_T', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Protect', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'PageInformation', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'PageInformationLength', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'NumberOfBytesWritten', 'type':'PSIZE_T', 'in': False, 'out': True, 'optional': True},
+			{'name': 'EnclaveError', 'type':'PULONG', 'in': False, 'out': True, 'optional': True},
 		]},
 
-	#TODO: Unknown function until now
 	'NtLoadHotPatch': {'code': 0x100, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'HotPatchName', 'type':'PUNICODE_STRING', 'in': True, 'out': False, 'optional': False},
+			{'name': 'LoadFlag', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtLoadKey': {'code': 0x101, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -2272,9 +2281,17 @@ Data = {
 			{'name': 'UserPfnArray', 'type':'PULONG', 'in': True, 'out': False, 'optional': True},
 		]},
 
-	#TODO: Unknown function until now
 	'NtMapViewOfSectionEx': {'code': 0x10D, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'SectionHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ProcessHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'SectionOffset', 'type':'PLARGE_INTEGER', 'in': True, 'out': True, 'optional': False},
+			{'name': 'BaseAddress', 'type':'PPVOID', 'in': True, 'out': True, 'optional': False},
+			{'name': 'ViewSize', 'type':'PSIZE_T', 'in': True, 'out': True, 'optional': False},
+			{'name': 'AllocationType', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Protect', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'DataBuffer', 'type':'PVOID', 'in': True, 'out': True, 'optional': True},
+			{'name': 'DataCount', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtModifyBootEntry': {'code': 0x10E, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
