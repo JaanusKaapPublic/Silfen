@@ -2471,12 +2471,11 @@ Data = {
 			{'name': 'TokenHandle', 'type':'PHANDLE', 'in': False, 'out': True, 'optional': False},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtOpenRegistryTransaction': {'code': 0x122, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'RegistryHandle', 'type':'PHANDLE', 'in': False, 'out': True, 'optional': False},
+			{'name': 'DesiredAccess', 'type':'ACCESS_MASK', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ObjectAttributes', 'type':'POBJECT_ATTRIBUTES', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtOpenResourceManager': {'code': 0x123, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -2694,9 +2693,13 @@ Data = {
 			{'name': 'ReturnLength', 'type':'PULONG', 'in': False, 'out': True, 'optional': True},
 		]},
 
-	#TODO: Unknown function until now
 	'NtQueryInformationByName': {'code': 0x140, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'ObjectAttributes', 'type':'POBJECT_ATTRIBUTES', 'in': True, 'out': False, 'optional': False},
+			{'name': 'IoStatusBlock', 'type':'PIO_STATUS_BLOCK', 'in': False, 'out': True, 'optional': False},
+			{'name': 'FileInformation', 'type':'PVOID', 'in': False, 'out': True, 'optional': False},
+			{'name': 'Length', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'FileInformationClass', 'type':'FILE_INFORMATION_CLASS', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtQueryInformationEnlistment': {'code': 0x141, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -3111,11 +3114,10 @@ Data = {
 			{'name': 'TmVirtualClock', 'type':'PLARGE_INTEGER', 'in': True, 'out': False, 'optional': True},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtRollbackRegistryTransaction': {'code': 0x177, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'RegistryHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Wait', 'type':'BOOL', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtRollbackTransaction': {'code': 0x178, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -3188,15 +3190,14 @@ Data = {
 			{'name': 'TargetFile', 'type':'HANDLE', 'in': True, 'out': False, 'optional': True},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtSetCachedSigningLevel2': {'code': 0x182, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Flags', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'InputSigningLevel', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'SourceFiles', 'type':'PHANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'SourceFileCount', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'TargetFile', 'type':'HANDLE', 'in': True, 'out': False, 'optional': True},
+			{'name': 'LevelInformation', 'type':'PVOID', 'in': True, 'out': False, 'optional': True},
 		]},
 
 	'NtSetContextThread': {'code': 0x183, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -3299,13 +3300,12 @@ Data = {
 			{'name': 'ResourceManagerInformationLength', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtSetInformationSymbolicLink': {'code': 0x192, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Handle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Class', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Buffer', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'BufferLength', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtSetInformationToken': {'code': 0x193, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -3557,9 +3557,10 @@ Data = {
 			{'name': 'ReturnLength', 'type':'PULONG', 'in': False, 'out': True, 'optional': True},
 		]},
 
-	#TODO: Unknown function until now
 	'NtTerminateEnclave': {'code': 0x1B6, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'BaseAddress', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'WaitForThread', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtTerminateJobObject': {'code': 0x1B7, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -3580,15 +3581,15 @@ Data = {
 		[
 		]},
 
-	#'NtTraceControl': {'code': 0x1BB, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
-	#	[
-	#		{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
-	#		{'name': 'None', 'type':'PVOID', 'in': True, 'out': False, 'optional': True},
-	#		{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
-	#		{'name': 'None', 'type':'PVOID', 'in': False, 'out': True, 'optional': True},
-	#		{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
-	#		{'name': 'None', 'type':'PULONG', 'in': False, 'out': True, 'optional': False},
-	#	]},
+	'NtTraceControl': {'code': 0x1BB, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
+		[
+			{'name': 'FunctionCode', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'InputBuffer', 'type':'PVOID', 'in': True, 'out': False, 'optional': True},
+			{'name': 'InputBufferLength', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'OutputBuffer', 'type':'PVOID', 'in': False, 'out': True, 'optional': True},
+			{'name': 'OutputBufferLength', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ReturnLength', 'type':'PULONG', 'in': False, 'out': True, 'optional': False},
+		]},
 
 	'NtTranslateFilePath': {'code': 0x1BC, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
@@ -3671,11 +3672,10 @@ Data = {
 			{'name': 'ServiceData', 'type':'PVOID', 'in': True, 'out': True, 'optional': False},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtWaitForAlertByThreadId': {'code': 0x1C8, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Handle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Timeout', 'type':'PLARGE_INTEGER', 'in': True, 'out': False, 'optional': True},
 		]},
 
 	'NtWaitForDebugEvent': {'code': 0x1C9, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -3686,23 +3686,18 @@ Data = {
 			{'name': 'WaitStateChange', 'type':'PVOID', 'in': False, 'out': True, 'optional': False},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtWaitForKeyedEvent': {'code': 0x1CA, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'KeyedEventHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Key', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Alertable', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Timeout', 'type':'PLARGE_INTEGER', 'in': True, 'out': False, 'optional': True},
 		]},
 
-	#TODO: Unknown parameter types
 	'NtWaitForWorkViaWorkerFactory': {'code': 0x1CB, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'?', 'in': True, 'out': False, 'optional': False},
+			{'name': 'WorkerFactoryHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'MiniPacket', 'type':'PVOID', 'in': False, 'out': True, 'optional': False},
 		]},
 
 	'NtWaitHighEventPair': {'code': 0x1CC, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
