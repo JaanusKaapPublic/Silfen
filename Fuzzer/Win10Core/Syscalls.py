@@ -2317,9 +2317,18 @@ Data = {
 			{'name': 'WatchTree', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
 		]},
 
-	#TODO: Unknown function until now
 	'NtNotifyChangeDirectoryFileEx': {'code': 0x111, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'FileHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Event', 'type':'HANDLE', 'in': True, 'out': False, 'optional': True},
+			{'name': 'ApcRoutine', 'type':'PIO_APC_ROUTINE', 'in': True, 'out': False, 'optional': True},
+			{'name': 'ApcContext', 'type':'PVOID', 'in': True, 'out': False, 'optional': True},
+			{'name': 'IoStatusBlock', 'type':'PIO_STATUS_BLOCK', 'in': False, 'out': True, 'optional': False},
+			{'name': 'Buffer', 'type':'PVOID', 'in': False, 'out': True, 'optional': False},
+			{'name': 'Length', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'CompletionFilter', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'WatchTree', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
+			{'name': 'DirectoryNotifyInformationClass', 'type':'DIRECTORY_NOTIFY_INFORMATION_CLASS', 'in': True, 'out': False, 'optional': True},
 		]},
 
 	'NtNotifyChangeKey': {'code': 0x112, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -2620,9 +2629,9 @@ Data = {
 			{'name': 'PreviousState', 'type':'PULONG', 'in': False, 'out': True, 'optional': True},
 		]},
 
-	#TODO: Unknown function until now
 	'NtQueryAuxiliaryCounterFrequency': {'code': 0x136, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'lpAuxiliaryCounterFrequency', 'type':'PULONGLONG', 'in': False, 'out': True, 'optional': False},
 		]},
 
 	'NtQueryBootEntryOrder': {'code': 0x137, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -2643,9 +2652,18 @@ Data = {
 			{'name': 'Level', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
 		]},
 
-	#TODO: Unknown function until now
 	'NtQueryDirectoryFileEx': {'code': 0x13A, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
+			{'name': 'FileHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Event', 'type':'HANDLE', 'in': True, 'out': False, 'optional': True},
+			{'name': 'ApcRoutine', 'type':'PIO_APC_ROUTINE', 'in': True, 'out': False, 'optional': True},
+			{'name': 'ApcContext', 'type':'PVOID', 'in': True, 'out': False, 'optional': True},
+			{'name': 'IoStatusBlock', 'type':'PIO_STATUS_BLOCK', 'in': False, 'out': True, 'optional': False},
+			{'name': 'FileInformation', 'type':'PVOID', 'in': False, 'out': True, 'optional': False},
+			{'name': 'Length', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'FileInformationClass', 'type':'FILE_INFORMATION_CLASS', 'in': True, 'out': False, 'optional': False},
+			{'name': 'QueryFlags', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'FileName', 'type':'PUNICODE_STRING', 'in': True, 'out': False, 'optional': True},
 		]},
 
 	'NtQueryDirectoryObject': {'code': 0x13B, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
