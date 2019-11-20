@@ -35,9 +35,9 @@ Data = {
 
 	'NtWaitForSingleObject': {'code': 0x4, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'PLARGE_INTEGER', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ObjectHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Alertable', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
+			{'name': 'TimeOut', 'type':'PLARGE_INTEGER', 'in': True, 'out': False, 'optional': True},
 		]},
 
 	'NtCallbackReturn': {'code': 0x5, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -793,11 +793,11 @@ Data = {
 
 	'NtWaitForMultipleObjects': {'code': 0x5B, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'PHANDLE', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'WAIT_TYPE', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'PLARGE_INTEGER', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Count', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Handles', 'type':'PHANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'WaitType', 'type':'WAIT_TYPE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Alertable', 'type':'BOOLEAN', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Timeout', 'type':'PLARGE_INTEGER', 'in': True, 'out': False, 'optional': True},
 		]},
 
 	'NtSetInformationObject': {'code': 0x5C, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -1933,20 +1933,20 @@ Data = {
 
 	'NtFilterTokenEx': {'code': 0xDE, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'PTOKEN_GROUPS', 'in': True, 'out': False, 'optional': True},
-			{'name': 'None', 'type':'PTOKEN_PRIVILEGES', 'in': True, 'out': False, 'optional': True},
-			{'name': 'None', 'type':'PTOKEN_GROUPS', 'in': True, 'out': False, 'optional': True},
-			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'PUNICODE_STRING', 'in': True, 'out': False, 'optional': True},
-			{'name': 'None', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'PUNICODE_STRING', 'in': True, 'out': False, 'optional': True},
-			{'name': 'None', 'type':'PTOKEN_GROUPS', 'in': True, 'out': False, 'optional': True},
-			{'name': 'None', 'type':'PTOKEN_SECURITY_ATTRIBUTES_INFORMATION', 'in': True, 'out': False, 'optional': True},
-			{'name': 'None', 'type':'PTOKEN_SECURITY_ATTRIBUTES_INFORMATION', 'in': True, 'out': False, 'optional': True},
-			{'name': 'None', 'type':'PTOKEN_GROUPS', 'in': True, 'out': False, 'optional': True},
-			{'name': 'None', 'type':'PHANDLE', 'in': False, 'out': True, 'optional': False},
+			{'name': 'TokenHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'Flags', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'SidsToDisable', 'type':'PTOKEN_GROUPS', 'in': True, 'out': False, 'optional': True},
+			{'name': 'PrivilegesToDelete', 'type':'PTOKEN_PRIVILEGES', 'in': True, 'out': False, 'optional': True},
+			{'name': 'RestrictedSids', 'type':'PTOKEN_GROUPS', 'in': True, 'out': False, 'optional': True},
+			{'name': 'DisableUserClaimsCount', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'UserClaimsToDisable', 'type':'PUNICODE_STRING', 'in': True, 'out': False, 'optional': True},
+			{'name': 'DisableDeviceClaimsCount', 'type':'ULONG', 'in': True, 'out': False, 'optional': False},
+			{'name': 'DeviceClaimsToDisable', 'type':'PUNICODE_STRING', 'in': True, 'out': False, 'optional': True},
+			{'name': 'DeviceGroupsToDisable', 'type':'PTOKEN_GROUPS', 'in': True, 'out': False, 'optional': True},
+			{'name': 'RestrictedUserAttributes', 'type':'PTOKEN_SECURITY_ATTRIBUTES_INFORMATION', 'in': True, 'out': False, 'optional': True},
+			{'name': 'RestrictedDeviceAttributes', 'type':'PTOKEN_SECURITY_ATTRIBUTES_INFORMATION', 'in': True, 'out': False, 'optional': True},
+			{'name': 'RestrictedDeviceGroups', 'type':'PTOKEN_GROUPS', 'in': True, 'out': False, 'optional': True},
+			{'name': 'NewTokenHandle', 'type':'PHANDLE', 'in': False, 'out': True, 'optional': False},
 		]},
 
 	'NtFlushBuffersFileEx': {'code': 0xDF, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -1982,10 +1982,10 @@ Data = {
 
 	'NtFlushVirtualMemory': {'code': 0xE4, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'PVOID', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'PULONG', 'in': True, 'out': False, 'optional': False},
-			{'name': 'None', 'type':'PIO_STATUS_BLOCK', 'in': True, 'out': False, 'optional': False},
+			{'name': 'ProcessHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'BaseAddress', 'type':'PVOID', 'in': True, 'out': True, 'optional': False},
+			{'name': 'RegionSize', 'type':'PULONG', 'in': True, 'out': True, 'optional': False},
+			{'name': 'IoStatusBlock', 'type':'PIO_STATUS_BLOCK', 'in': False, 'out': True, 'optional': False},
 		]},
 
 	'NtFlushWriteBuffer': {'code': 0xE5, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
@@ -3720,12 +3720,12 @@ Data = {
 
 	'NtWaitHighEventPair': {'code': 0x1CC, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'EventHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
 		]},
 
 	'NtWaitLowEventPair': {'code': 0x1CD, 'retVal':'NTSTATUS', 'lib': 'ntdll.dll', 'params':
 		[
-			{'name': 'None', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
+			{'name': 'EventHandle', 'type':'HANDLE', 'in': True, 'out': False, 'optional': False},
 		]},
 
 }
